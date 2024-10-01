@@ -1,0 +1,36 @@
+.about_image {
+      margin: 20%;
+      width: 100%;
+      height: auto ;
+      background-image: url('about.jpg');
+      right: 4%;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-position: center;
+}
+
+.about_text {
+      margin: 20%;
+      width: 60%;
+      text-align: justify;
+      font-size: medium;
+      font-style: italic;
+      color: rgb(2, 2, 2);
+      line-height: 1.5;
+      padding: 20px;
+      border-radius: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+
+}
+
+Paleta de colores compartida por Karla:
+Rojo vibrante (#FF5733)
+Amarillo brillante (#FFC300)
+Azul cielo (#33B5E5)
+Verde menta (#4CAF50)
