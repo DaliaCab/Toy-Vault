@@ -1,37 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import imagen3 from "../Assets/imagen (1).png";
 import imagen4 from "../Assets/imagen.png";
 import imagen5 from "../Assets/Multimedia (2).jpeg";
 import imagen6 from "../Assets/Multimedia (3).jpeg";
+import styles from "../styles/MainSections.module.css";
 
 const MainSections = () => {
-    return (
-        <div id="carousel" className="carousel slide" data-bs-ride="carousel">
-            <div className="carousel-inner">
-                <div className="carousel-item active">
-                    <img src={imagen3} className="d-block w-100" alt="imagen3" />
-                </div>
-                <div className="carousel-item">
-                    <img src={imagen4} className="d-block w-100" alt="imagen4" />
-                </div>
-                <div className="carousel-item">
-                    <img src={imagen5} className="d-block w-100" alt="imagen5" />
-                </div>
-                <div className="carousel-item">
-                    <img src={imagen6} className="d-block w-100" alt="imagen6" />
-                </div>
-            </div>
-            
-            <button className="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Previous</span>
-            </button>
-            <button className="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Next</span>
-            </button>
-        </div>
+  const images = [imagen3, imagen4, imagen5, imagen6];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentImageIndex(
+      currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1
     );
+  };
+
+  const handleNext = () => {
+    setCurrentImageIndex(
+      currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1
+    );
+  };
+
+  return (
+    <div className={styles.carousel}>
+      <div className={styles.carouselInner}>
+        <img
+          src={images[currentImageIndex]}
+          alt={`imagen${currentImageIndex + 1}`}
+          className={styles.carouselImage}
+        />
+      </div>
+
+      {/* Botones de navegación */}
+      <button onClick={handlePrev} className={styles.carouselControlPrev}>
+        &#8249;
+      </button>
+      <button onClick={handleNext} className={styles.carouselControlNext}>
+        &#8250;
+      </button>
+    </div>
+  );
 };
 
 export default MainSections;
