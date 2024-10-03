@@ -11,16 +11,16 @@ const NavBar = () => {
       </div>
       <ul className={styles.navLinks}>
         <li>
-          <a href="#home">Home</a>
+          <a href="#home">Inicio</a>
         </li>
         <li>
-          <a href="#shop">Shop</a>
+          <a href="#shop">Tienda</a>
         </li>
         <li>
-          <a href="#about">About</a>
+          <a href="#about">Sobre nosotros</a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#contact">Contáctanos</a>
         </li>
       </ul>
     </nav>
