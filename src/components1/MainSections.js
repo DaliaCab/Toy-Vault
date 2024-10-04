@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import imagen3 from "../Assets/imagen (1).png";
-import imagen4 from "../Assets/imagen.png";
-import imagen5 from "../Assets/Multimedia (2).jpeg";
-import imagen6 from "../Assets/Multimedia (3).jpeg";
-import styles from "../styles/MainSections.module.css";
+import imagen3 from "../assets1/imagen (1).png";
+import imagen4 from "../assets1/imagen.png";
+import imagen5 from "../assets1/Multimedia (2).jpeg";
+import imagen6 from "../assets1/Multimedia (3).jpeg";
+import styles from "../styles1/MainSections.module.css";
 
 const MainSections = () => {
   const [index, setIndex] = useState(0);

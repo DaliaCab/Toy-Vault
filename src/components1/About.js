@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import imagen1 from "../Assets/Multimedia.jpeg";
-import imagen2 from "../Assets/Multimedia (1).jpeg";
-import styles from "../styles/About.module.css";
+import imagen1 from "../assets1/Multimedia.jpeg";
+import imagen2 from "../assets1/Multimedia (1).jpeg";
+import styles from "../styles1/About.module.css";
 
 const About = () => {
   const [clickedImage, setClickedImage] = useState(null); // Estado para controlar la imagen clickeada
