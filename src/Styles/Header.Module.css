@@ -56,7 +56,7 @@
     gap: 10px; /* Espacio reducido entre enlaces */
     width: 100%; /* Ancho completo */
     text-align: center; /* Centra enlaces */
-    background-color: #333; /* Fondo oscuro para el menú desplegable */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente para el menú desplegable */
     position: absolute; /* Para que se superponga a otros elementos */
     top: 60px; /* Ajusta según la altura de la barra de navegación */
     left: 0;

@@ -3,10 +3,10 @@ import styles from "../styles/Header.module.css";
 import logoImage from "../Assets/logo.png";
 
 const NavBar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);  //Agregamos un estado para que controle si el menú de navegación está abierto o cerrado
+  const [isMenuOpen, setIsMenuOpen] = useState(false); //Agregamos un estado para que controle si el menú de navegación está abierto o cerrado
   const cambiarMenu = () => {
-    setIsMenuOpen(isMenuOpen ? false : true);       //Si isMenuOpen es true (el menú está abierto), entonces lo cierra (lo cambia a false) y viceversa
-};
+    setIsMenuOpen(isMenuOpen ? false : true); //Si isMenuOpen es true (el menú está abierto), entonces lo cierra (lo cambia a false) y viceversa
+  };
 
   return (
     <nav className={styles.navbar}>
@@ -38,4 +38,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-

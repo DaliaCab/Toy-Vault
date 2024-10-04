@@ -39,21 +39,40 @@
   font-size: 1.5rem; /* Tamaño de fuente grande */
 }
 
+.botonTexto{
+  background-color: #e29b00; 
+  padding: 12px 30px; /*Botón más ancho*/
+  text-align: center;
+  transition: width 0.3s ease;
+  cursor: pointer;
+  border-radius: 15px;
+  font-size: 20px;
+}
+
+.botonTexto:hover{
+  width: 200px;
+  background: linear-gradient(90deg, #d4bf46, #ffcd62);  /*1gradiente diferente en el hover*/
+}
+
 .boton {
   margin-top: 15px; /* Espacio entre el texto y el botón */
   padding: 10px 15px; /* Espaciado interno */
   font-size: 16px; /* Tamaño del texto en los botones */
   cursor: pointer; /* Cambia el cursor al pasar por encima */
-  background-color: #007BFF; /* Color de fondo */
+  background-color: #ff6600; /* Color de fondo */
   color: rgb(10, 10, 10); /* Color del texto */
   border: none; /* Sin borde */
-  border-radius: 5px; /* Bordes redondeados */
-  transition: background-color 0.3s; /* Transición del color de fondo */
+  border-radius: 50%; /* Bordes redondeados */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Transición del color de fondo */
 }
 
+
 .boton:hover {
-  background-color: #0056b3; /* Cambiar color al pasar el mouse */
+  background-color: #ff854d; /* Cambiar color al pasar el mouse */
+  box-shadow: 0 4px 8px rgba(235, 23, 23, 0.885);
+  transform: scale(1.1);
 }
+
 
 .boton.prev {
   position: absolute; /* Posiciona los botones de manera absoluta */
@@ -69,4 +88,30 @@
   right: 10px; /* Botón "Siguiente" a la derecha */
   transform: translateY(-50%); /* Ajusta la posición para centrar */
   z-index: 1; /* Asegúrate de que el botón esté en la parte superior */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .texto {
+    font-size: 1.2rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    padding: 10px; /* Menos espaciado interno */
+  }
+
+  .botonTexto {
+    font-size: 15px; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+  }
+
+  .boton {
+    font-size: 12px; /* Tamaño de fuente más pequeño en botones */
+  }
+}
+
+@media (max-width: 480px) {
+  .texto {
+    font-size: 1rem; /* Tamaño de fuente más pequeño en pantallas más pequeñas */
+  }
+
+  .botonTexto {
+    font-size: 12px; /* Tamaño de fuente aún más pequeño en pantallas muy pequeñas */
+  }
 }
