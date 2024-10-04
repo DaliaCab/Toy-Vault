@@ -1,11 +1,11 @@
 .navbar {
   display: flex;
-  justify-content: space-between; /* Para distribuir el logo y enlaces */
+  justify-content: space-between; /* Distribuir logo y enlaces */
   align-items: center;
   background: linear-gradient(to right, #FFD700, #e29b00);
   padding: 10px 20px;
   height: 50px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -18,16 +18,16 @@
   width: auto;
 }
 
-.menuIcon{ /*Menú hamburguesa*/
-  display: none;
+.menuIcon {
+  display: none; /* Oculta el menú hamburguesa por defecto */
   cursor: pointer;
   color: white;
-  font-size: 24px;
+  font-size: 24px; /* Ajusta el tamaño del ícono */
 }
 
 .navLinks {
   list-style: none;
-  display: flex;
+  display: flex; /* Menú horizontal en pantallas grandes */
   gap: 50px; /* Espacio entre los enlaces */
   margin: 0;
   padding: 0;
@@ -46,31 +46,24 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .menuIcon{
-    display: block;
+  .menuIcon {
+    display: block; /* Muestra el ícono de hamburguesa en pantallas pequeñas */
   }
 
   .navLinks {
-      display: none; /* Oculta los enlaces por defecto */
-      flex-direction: column; /* Coloca los enlaces en columna */
-      gap: 10px; /* Espacio reducido entre enlaces */
-      width: 100%; /* Ancho completo */
-      text-align: center; /* Centrar enlaces */
-      background-color: #333;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      z-index: 1000;
+    display: none; /* Oculta los enlaces por defecto */
+    flex-direction: column; /* Coloca los enlaces en columna */
+    gap: 10px; /* Espacio reducido entre enlaces */
+    width: 100%; /* Ancho completo */
+    text-align: center; /* Centra enlaces */
+    background-color: #333; /* Fondo oscuro para el menú desplegable */
+    position: absolute; /* Para que se superponga a otros elementos */
+    top: 60px; /* Ajusta según la altura de la barra de navegación */
+    left: 0;
+    z-index: 1000; /* Asegúrate de que esté sobre otros elementos */
   }
 
-  .navbar.active .navLinks {
-      display: flex; /* Muestra los enlaces cuando el menú está activo */
-  }
-
-  .menuIcon {
-      display: block;
-      font-size: 30%;
-      cursor: pointer;
-      color: white;
+  .navLinks.active {
+    display: flex; /* Muestra los enlaces cuando el menú está activo */
   }
 }

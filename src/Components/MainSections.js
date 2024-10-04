@@ -21,10 +21,10 @@ const MainSections = () => {
     setCurrentImageIndex((prevIndex) =>
             prevIndex === images.length - 1 ? 0 : prevIndex + 1
           );
-        }, 4000); // Cambia cada 4  segundos// Limpiar el intervalo cuando el componente se desmontereturn() =>clearInterval(interval);
+        }, 4000); // Cambia cada 4  segundos
 
       
-      return () => clearInterval(interval);
+      return () => clearInterval(interval);// Limpiar el intervalo cuando el componente se desmontereturn() =>clearInterval(interval);
     },[images.length]);
 
   const handlePrev = () => {
@@ -68,6 +68,4 @@ const MainSections = () => {
     </div>
   );
 };
-
-export default MainSections;
-
+export default MainSections
