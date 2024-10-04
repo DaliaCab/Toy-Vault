@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import styles from "../styles/Header.module.css";
-import logoImage from "../Assets/logo.png";
+import styles from "../styles1/Header.module.css";
+import logoImage from "../assets1/logo.png";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); //Agregamos un estado para que controle si el menú de navegación está abierto o cerrado
